@@ -27,10 +27,10 @@ struct CustomDeterminateProgressView: View {
             //.foregroundStyle(.black) //Title & label color. Default is black & gray respectively.
             .background(.white)
             .onReceive(timer) { _ in
-                let interval: Double = Double.random(in: 5...15) //Interval varies and can be 5 and up to 15.
+                let interval: Double = Double.random(in: 5...15) //Interval varies and can be 5 up to 15.
                 print("Interval: \(interval)")
                 if progress + interval <= in_between_number {
-                    progress = progress + 5
+                    progress = progress + interval
                 }
             }
             .onChange(of: progress) { oldValue, newValue in
