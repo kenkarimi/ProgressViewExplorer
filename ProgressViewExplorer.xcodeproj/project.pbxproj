@@ -11,6 +11,12 @@
 		BE8DE0052C87BC4000F3D362 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DE0042C87BC4000F3D362 /* ContentView.swift */; };
 		BE8DE0072C87BC4100F3D362 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE8DE0062C87BC4100F3D362 /* Assets.xcassets */; };
 		BE8DE00A2C87BC4100F3D362 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE8DE0092C87BC4100F3D362 /* Preview Assets.xcassets */; };
+		BE8DE0122C87E9B800F3D362 /* IndeterminateProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DE0112C87E9B800F3D362 /* IndeterminateProgressView.swift */; };
+		BE8DE0142C88CC6300F3D362 /* CustomIndeterminateAlertProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DE0132C88CC6200F3D362 /* CustomIndeterminateAlertProgressView.swift */; };
+		BE8DE0162C88FE8100F3D362 /* DeterminateProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DE0152C88FE8100F3D362 /* DeterminateProgressView.swift */; };
+		BE8DE0182C89430300F3D362 /* CustomDeterminateProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DE0172C89430300F3D362 /* CustomDeterminateProgressView.swift */; };
+		BE8DE01A2C8A29F000F3D362 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DE0192C8A29F000F3D362 /* ContentView2.swift */; };
+		BE8DE01C2C8A2DDF00F3D362 /* ContentView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DE01B2C8A2DDF00F3D362 /* ContentView3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		BE8DE0042C87BC4000F3D362 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BE8DE0062C87BC4100F3D362 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE8DE0092C87BC4100F3D362 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BE8DE0112C87E9B800F3D362 /* IndeterminateProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndeterminateProgressView.swift; sourceTree = "<group>"; };
+		BE8DE0132C88CC6200F3D362 /* CustomIndeterminateAlertProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIndeterminateAlertProgressView.swift; sourceTree = "<group>"; };
+		BE8DE0152C88FE8100F3D362 /* DeterminateProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeterminateProgressView.swift; sourceTree = "<group>"; };
+		BE8DE0172C89430300F3D362 /* CustomDeterminateProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDeterminateProgressView.swift; sourceTree = "<group>"; };
+		BE8DE0192C8A29F000F3D362 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
+		BE8DE01B2C8A2DDF00F3D362 /* ContentView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				BE8DE0022C87BC4000F3D362 /* ProgressViewExplorerApp.swift */,
-				BE8DE0042C87BC4000F3D362 /* ContentView.swift */,
+				BE8DE0102C87BE0D00F3D362 /* View */,
 				BE8DE0062C87BC4100F3D362 /* Assets.xcassets */,
 				BE8DE0082C87BC4100F3D362 /* Preview Content */,
 			);
@@ -65,6 +77,20 @@
 				BE8DE0092C87BC4100F3D362 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BE8DE0102C87BE0D00F3D362 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE8DE0042C87BC4000F3D362 /* ContentView.swift */,
+				BE8DE0112C87E9B800F3D362 /* IndeterminateProgressView.swift */,
+				BE8DE0132C88CC6200F3D362 /* CustomIndeterminateAlertProgressView.swift */,
+				BE8DE0152C88FE8100F3D362 /* DeterminateProgressView.swift */,
+				BE8DE0172C89430300F3D362 /* CustomDeterminateProgressView.swift */,
+				BE8DE0192C8A29F000F3D362 /* ContentView2.swift */,
+				BE8DE01B2C8A2DDF00F3D362 /* ContentView3.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +163,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE8DE0182C89430300F3D362 /* CustomDeterminateProgressView.swift in Sources */,
+				BE8DE0122C87E9B800F3D362 /* IndeterminateProgressView.swift in Sources */,
 				BE8DE0052C87BC4000F3D362 /* ContentView.swift in Sources */,
+				BE8DE0162C88FE8100F3D362 /* DeterminateProgressView.swift in Sources */,
+				BE8DE01A2C8A29F000F3D362 /* ContentView2.swift in Sources */,
+				BE8DE0142C88CC6300F3D362 /* CustomIndeterminateAlertProgressView.swift in Sources */,
+				BE8DE01C2C8A2DDF00F3D362 /* ContentView3.swift in Sources */,
 				BE8DE0032C87BC4000F3D362 /* ProgressViewExplorerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
