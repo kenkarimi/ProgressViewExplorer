@@ -13,7 +13,8 @@ struct CustomDeterminateProgressView: View {
     @Binding var determinate_bar_visibility: Bool
     @Binding var progress: Double //'value' parameter of ProgressView() has to be a Float/Double not an Int.
     var in_between_number: Double //We randomize the 'in-between' number so that it's not immediately obvious to the user that this is a fake determinate progress view because it pauses at the same place all the time before completion.
-    let timer = Timer.publish(every: 0.5, on: RunLoop.main, in: RunLoop.Mode.common).autoconnect()
+    let timer = Timer.publish(every: Double.random(in: 0.2...1.0), on: RunLoop.main, in: RunLoop.Mode.common).autoconnect()
+    let max_progress: Double = 100
     
     var body: some View {
         if self.determinate_bar_visibility {
@@ -28,15 +29,17 @@ struct CustomDeterminateProgressView: View {
             .background(.white)
             .onReceive(timer) { _ in
                 let interval: Double = Double.random(in: 5...15) //Interval varies and can be 5 up to 15.
-                print("Interval: \(interval)")
+                print("Progress Interval: \(interval)")
                 if progress + interval <= in_between_number {
                     progress = progress + interval
                 }
             }
             .onChange(of: progress) { oldValue, newValue in
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { //Give it a split second to show it got to 100 before erasing it.
-                    if newValue == 100 {
-                        self.determinate_bar_visibility = false
+                let interval: Double = Double.random(in: 0.2...1.0)
+                print("Time Interval: \(interval)")
+                DispatchQueue.main.asyncAfter(deadline: .now() + interval, execute: { //Give it a split second to show it got to 100 before erasing it.
+                    if newValue == max_progress {
+                        determinate_bar_visibility = false
                     }
                 })
             }
