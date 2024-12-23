@@ -20,8 +20,8 @@ struct ContentView3: View {
                 in_between_number: determinate_bar_in_between_number
             )
             Button {
-                self.determinate_bar_progress = 15.0
-                self.determinate_bar_in_between_number = Double.random(in: 55..<90) //Can be 65 to 89
+                self.determinate_bar_progress = Double.random(in: 5...15) //Can be 5 to 15
+                self.determinate_bar_in_between_number = Double.random(in: 65..<90) //Can be 65 to 89
                 print("Random: \(determinate_bar_in_between_number)")
                 self.determinate_bar_visibility = true
             } label: {
